@@ -1,0 +1,398 @@
+:root {
+    --bg-blue: #638bfa;
+    --font-white: #fff;
+    --bg-white: #eee;
+    --bg-hover: #ddd;
+    --border-light: rgba(180, 180, 180, 1);
+    --height: 150px;
+    --height-less: 100px;
+    --bg-blue-hover: #4675f7;
+}
+
+h4 {
+    font-family: algerian;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar a, .navbar a:hover, .poll-list a, .poll-list a:hover {
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+}
+
+/*Navbar Region */
+nav .navbar {
+    background-color: var(--bg-white);
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    margin-right: 1.5rem;
+}
+.navbar-brand {
+    margin: 0 0 0 1.5rem;
+    padding: .66rem;
+    padding-right: 0;
+}
+.nav li {
+    display: inline-block;
+}
+.navbar span {
+    display: inline-block;
+}
+.navbar a:hover {
+    background-color: var(--bg-hover);
+}
+.navbar .navbar-brand a:hover {
+    background: none;
+}
+.nav a {
+    display: inline-block;
+    padding: .9rem;
+}
+.active {
+    background-color: var(--bg-hover);
+}
+
+/* Main Page */
+.container-fluid {
+    padding: 0;
+}
+.info-container {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    height: var(--height);
+    color: var(--font-white);
+    background-color: var(--bg-blue);
+}
+.info-container h1 {
+    margin: 0;
+    padding: 1rem;
+}
+.info-container p {
+    margin-bottom: 0;
+    padding-bottom: 5px; 
+}
+/*Poll List */
+.poll-list {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: 5px;
+}
+.poll-list li {
+    border-bottom: 1px solid var(--border-light);
+}
+.poll-list a {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+}
+.poll-list a:hover {
+    background-color: var(--bg-hover);
+}
+.poll-list .user a {
+    width: 90%;
+}
+.poll-list .user .btn {
+    margin: 0;
+    padding: .20rem .5rem;
+    font-size: 1rem;
+    width: 10%;
+}
+
+
+/* Dashboard */
+.dashboard .container {
+    width: 50%;
+}
+.dashboard-container {
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    background-color: var(--bg-blue);
+    height: var(--height);
+    color: var(--font-white);
+}
+.dashboard-container span {
+    border: 1px solid var(--border-light);
+    padding: .4rem;
+    border-radius: 4px;
+    margin: 10px;
+}
+.dashboard-container span:hover {
+    cursor: pointer;
+    background-color: var(--bg-blue-hover);
+}
+/*New Poll */
+#newpoll {
+    margin-top: 1rem;
+}
+#newpoll p {
+    margin: .4rem;
+}
+#newpoll input {
+    margin: auto;
+    width: 60%;
+}
+#newpoll button {
+    margin: .4rem .6rem;
+    padding: .4rem;
+}
+
+
+/*Forms */
+input {
+    display: block;
+    padding: .2rem;
+    border: none;
+    border: 1px solid var(--border-light);
+    border-radius: .3rem;
+}
+#loginContainer {
+    margin: 2rem;
+}
+#loginContainer input {
+    width: 50%;
+}
+#signupContainer {
+    margin: 2rem;
+}
+#signupContainer input {
+    width: 50%;
+}
+
+/* Poll Options */
+.option-form {
+    width: 30%;
+    margin: auto;
+}
+.option-container {
+    width: 100%;
+    border: 1px solid var(--border-light);
+    border-radius: .4rem;
+    text-align: left;
+    padding-left: 1.3rem;
+    margin-bottom: .5rem;
+}
+.option-form input {
+    display: inline-block;
+}
+.option-container label {
+    margin: 0;
+    padding: .5rem;
+}
+.option-form .btn {
+    margin: .5rem;
+}
+
+
+/* Poll Charts */
+#graph {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+}
+.tip {
+    border: 1px solid black;
+    position: absolute;
+    padding: 5px;
+    background-color: #000;
+    border-radius: 3px;
+    color: #ddd;
+}
+.tip p {
+    margin: 0;
+}
+/*Footer */
+.footer {
+    font-size: 14px;
+}
+.footer p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1250px) {
+    .poll-list .user a {
+        width: 85%;
+    }
+    .poll-list .user .btn {
+        margin: 0;
+        padding: .20rem .5rem;
+        font-size: 1rem;
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    /*Dashboard */
+    #newpoll input {
+        width: 75%;
+    }
+    .poll-list .user a {
+        width: 80%;
+    }
+    .poll-list .user .btn {
+        margin: 0;
+        padding: .20rem .5rem;
+        font-size: 1rem;
+        width: 20%;
+    }
+    /* Poll */
+    .option-form {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    html {
+        font-size: 15px;
+    }
+    #newpoll input {
+        width: 100%;
+    }
+    .poll-list .user a {
+        width: 70%;
+    }
+    .poll-list .user .btn {
+        margin: 0;
+        padding: .20rem .5rem;
+        font-size: .8rem;
+        width: 30%;
+    }
+    /* Poll */
+    .option-form {
+        width: 60%;
+    }
+    #graph {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    /*Main Page */
+    html {
+        font-size: 14px;
+    }
+    .navbar-brand {
+        margin-left: .75rem;
+    }
+    .nav {
+        margin-right: .75rem;
+    }
+    .info-container h1 {
+        font-size: 2rem;
+    }
+    /*Dashboard */
+    .dashboard-container h1 {
+        font-size: 2rem;
+    }
+    .dashboard .container {
+        width: 65%;
+    }
+    #newpoll input {
+        width: 100%;
+    }
+    #newpoll .btn {
+        font-size: 14px;
+        margin: .3rem .4rem;
+        padding: .2rem;
+    }
+    /* Poll List */
+    .poll-list .user a {
+        width: 75%;
+    }
+    .poll-list .user .btn {
+        margin: 0;
+        padding: .20rem .5rem;
+        font-size: .8rem;
+        width: 25%;
+    }
+    /* Forms */
+    #loginContainer .btn {
+        margin: 0 .4rem;
+        padding: .3rem;
+    }
+    #signupContainer .btn {
+        margin: 0 .4rem;
+        padding: .3rem;
+    }
+    /* Poll */
+    .option-form {
+        width: 75%;
+    }
+    #graph {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    html {
+        font-size: 11px;
+    }
+    /*Navbar */
+    .navbar-brand {
+        margin-right: 0.75rem;
+    }
+    .nav {
+        margin: 0;
+    }
+    .nav a {
+        padding: .6rem;
+    }
+    .info-container h1 {
+        font-size: 2rem;
+    }
+    .info-container, .dashboard-container {
+        height: var(--height-less);
+    }
+    /*Dashboard */
+    .dashboard-container h1 {
+        font-size: 2rem;
+    }
+    .dashboard .container {
+        width: 80%;
+    }
+    #newpoll input {
+        width: 100%;
+    }
+    #newpoll .btn {
+        font-size: 11px;
+        margin: .2rem .2rem;
+        padding: .2rem;
+    }
+    /*Poll List */
+    .poll-list .user a {
+        width: 70%;
+    }
+    .poll-list .user .btn {
+        margin: 0;
+        padding: .20rem .5rem;
+        width: 30%;
+    }
+    /* Forms */
+    #loginContainer .btn {
+        margin: 0 .2rem;
+        padding: .2rem;
+    }
+    #loginContainer input {
+        width: 75%;
+    }
+    #signupContainer .btn {
+        margin: 0 .2rem;
+        padding: .2rem;
+    }
+    #signupContainer input {
+        width: 75%;
+    }
+    /* Poll */
+    .option-form {
+        width: 80%;
+    }
+}
