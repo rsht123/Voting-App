@@ -9,12 +9,11 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('./models/User');
 const authRoutes = require('./routes/authRoutes');
 const pollRoutes = require('./routes/pollRoutes');
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
 require('dotenv').config();
-
-console.log(process.env.MONGO_URL);
 
 mongoose.connect(process.env.MONGO_URL);
 const db = mongoose.connection;
@@ -96,4 +95,4 @@ app.use(function(err, req, res, next) {
     res.send(err.status + ' ' + err.message);
 })
 
-app.listen(3000, () => console.log('API running on port 3000...'));
+app.listen(PORT, () => console.log('API running on port 3000...'));
