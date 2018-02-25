@@ -24,7 +24,6 @@ class MyPolls extends React.Component {
     }
 
     deletePoll(e) {
-        console.log(e.target.parentElement.id);
         const id = e.target.parentElement.id;
         const data = JSON.stringify({id: id});
         fetch('/polls/deletePoll', {
