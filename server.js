@@ -9,7 +9,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const User = require('./models/User');
 const authRoutes = require('./routes/authRoutes');
 const pollRoutes = require('./routes/pollRoutes');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 

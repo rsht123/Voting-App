@@ -132,7 +132,6 @@ router.post('/updatePoll', (req, res, next) => {
 })
 
 router.post('/deletePoll', (req, res, next) => {
-    console.log(req.body);
     if(!req.user) {
         return res.json("User logged out.");
     }

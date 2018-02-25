@@ -8,13 +8,15 @@ const PollList = ({ polls, user, deletePoll }) => {
                 {user && <button className='btn btn-danger' onClick={deletePoll}>Delete</button>}
             </li>
     })
+    const isPolls = polls.length > 0 ? true : false;
     return (
         <div className='container'>
         {!user && <h4>All polls by campers</h4>}
         {user && <h4>Your polls</h4>}
-        <ul className='list-unstyled poll-list'>
+        {!isPolls && <p>You have no polls. Go to the New Poll tab to create a new one.</p>}
+        {isPolls && <ul className='list-unstyled poll-list'>
             {allPolls}
-        </ul>
+        </ul>}
         </div>
     )
 }
